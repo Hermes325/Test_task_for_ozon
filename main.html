@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>web</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg class="progress-ring" width="150" height="150">
+      <!-- Основной круг -->
+      <circle
+        cx="75"
+        cy="75"
+        r="55"
+        stroke="grey"
+        fill="none"
+        stroke-width="10"
+      />
+
+      <!-- Круг, отражающий прогресс -->
+      <circle
+        class="progress-ring__circle"
+        cx="75"
+        cy="75"
+        r="55"
+        stroke="aqua"
+        stroke-width="10"
+        fill="transparent"
+      />
+    </svg>
+
+    <div class="settings">
+      <div class="settings_position">
+        <input
+          type="number"
+          class="percent"
+          min="0"
+          max="100"
+          required
+          value="0"
+        />
+        <p>Value</p>
+      </div>
+
+      <div class="settings_position">
+        <label class="switch">
+          <input type="checkbox" id="animate" />
+          <span class="slider round"></span>
+        </label>
+        <p>Animate</p>
+      </div>
+
+      <div class="settings_position">
+        <label class="switch">
+          <input type="checkbox" id="hide" />
+          <span class="slider round"></span>
+        </label>
+        <p>Hide</p>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
