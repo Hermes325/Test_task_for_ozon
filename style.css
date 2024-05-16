@@ -5,9 +5,9 @@ body {
     display         : flex;
     align-items     : center;
     flex-direction  : column;
-    justify-content : center;
-
+    justify-content : space-evenly;
 }
+
 
 .progress-ring__circle {
     transform-origin: center;
@@ -38,9 +38,20 @@ body {
     justify-content: flex-start;
 }
 
+/* шрифты */
+h1 {
+    position : absolute;
+    left     : 10px;
+    top      : 0;
+    font-size: 30px;
+}
+
 p {
     font-size: 16px;
 }
+
+
+/* кнопки */
 
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
@@ -120,4 +131,15 @@ input:checked+.slider:before {
 
 .visibility {
     visibility: hidden;
+}
+
+@media screen and (min-width: 550px) {
+    body {
+        width         : 100%;
+        flex-direction: row;
+    }
+
+    h1 {
+        font-size: 36px;
+    }
 }
