@@ -6,12 +6,7 @@ body {
     align-items     : center;
     flex-direction  : column;
     justify-content : space-evenly;
-}
-
-
-.progress-ring__circle {
-    transform-origin: center;
-    transform       : rotate(-90deg);
+    font-family     : Arial;
 }
 
 .percent {
@@ -39,7 +34,7 @@ body {
 }
 
 /* шрифты */
-h1 {
+.h1 {
     position : absolute;
     left     : 10px;
     top      : 0;
@@ -66,16 +61,7 @@ input[type="number"]::-webkit-outer-spin-button {
     outline-offset: 0;
 }
 
-@keyframes fill {
-    to {
-        stroke-dashoffset: 0%;
-    }
-}
 
-.progress-ring__anime {
-
-    animation: fill 3s linear forwards;
-}
 
 .switch {
     position    : relative;
@@ -96,7 +82,7 @@ input[type="number"]::-webkit-outer-spin-button {
     left              : 0;
     right             : 0;
     bottom            : 0;
-    background-color  : #ccc;
+    background-color  : #eaf0f6;
     -webkit-transition: .4s;
     transition        : .4s;
     border-radius     : 34px;
@@ -116,11 +102,11 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 input:checked+.slider {
-    background-color: #2196F3;
+    background-color: #015cff;
 }
 
 input:focus+.slider {
-    box-shadow: 0 0 1px #2196F3;
+    box-shadow: 0 0 1px #015cff;
 }
 
 input:checked+.slider:before {
@@ -129,9 +115,7 @@ input:checked+.slider:before {
     transform        : translateX(26px);
 }
 
-.visibility {
-    visibility: hidden;
-}
+
 
 @media screen and (min-width: 550px) {
     body {

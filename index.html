@@ -6,30 +6,45 @@
     <title>web</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
-    <h1>Progress</h1>
-    <svg class="progress-ring" width="150" height="150">
-      <!-- main circle -->
-      <circle
-        cx="75"
-        cy="75"
-        r="55"
-        stroke="grey"
-        fill="none"
-        stroke-width="10"
-      />
 
-      <!-- progressing circle  -->
-      <circle
-        class="progress-ring__circle"
-        cx="75"
-        cy="75"
-        r="55"
-        stroke="aqua"
-        stroke-width="10"
-        fill="transparent"
-      />
-    </svg>
+  <body>
+    <h1 class="h1">Progress</h1>
+
+    <template id="ring">
+      <style>
+        .progress-ring__circle {
+          transform-origin: center;
+          transform: rotate(-90deg);
+        }
+        .hide {
+          visibility: hidden;
+        }
+      </style>
+      <svg class="progress-ring" width="150" height="150">
+        <!-- main circle -->
+        <circle
+          cx="75"
+          cy="75"
+          r="55"
+          stroke="#eaf0f6"
+          fill="none"
+          stroke-width="10"
+        />
+
+        <!-- progressing circle  -->
+        <circle
+          class="progress-ring__circle"
+          cx="75"
+          cy="75"
+          r="55"
+          stroke="#015cff"
+          stroke-width="10"
+          fill="transparent"
+        />
+      </svg>
+    </template>
+
+    <progress-ring></progress-ring>
 
     <div class="settings">
       <div class="settings_position">
@@ -54,6 +69,7 @@
       </div>
     </div>
 
-    <script src="./main.js"></script>
+    <script type="module" src="./ProgressRing.js"></script>
+    <script type="module" src="./settings.js"></script>
   </body>
 </html>
